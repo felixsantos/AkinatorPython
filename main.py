@@ -18,87 +18,12 @@ driver = webdriver.PhantomJS(executable_path='phantomjs-2.1.1-windows/bin/phanto
                 #driver.set_window_size(1024, 768) # optional
 driver.get('http://pt.akinator.com')
 sleep(2) #wait time to scan the code in second
-
 instanciaPergunta = 5
-
 loop = True
 lastAswer =""
 contPergunta = 0
-
-sleep(3)
 descoberta_str = ""
 perguntaCapturada =""
-
- # while loop == True:
-#     try:
-#         print(driver.find_element_by_class_name('proposal-title').text)
-#         loop = False
-#     except:
-#          try:
-#             text = driver.find_element_by_class_name('question-text').text
-
-#             if lastAswer != text and lastAswer != "Carregando..."  and text  != "Carregando..." :
-#                 print(text)
-#                 lastAswer = text
-#                 controleJson.salvarPergunta(instanciaPergunta,text,contPergunta)
-#                 loopResposta = True
-#             else:
-#                print('while')
-#                while loopResposta == True:
-#                     resposta = controleJson.respostaPergunta(instanciaPergunta,contPergunta)
-#                     print(resposta)
-#                     if resposta != "":
-#                         if resposta == "1":
-#                             driver.find_element_by_id('a_yes').click()
-#                             contPergunta +1
-#                             loopResposta = False
-#                         if resposta == "2":
-#                             driver.find_element_by_id('a_no').click()
-#                             contPergunta +1
-#                             loopResposta = False
-#                         if resposta == "3":
-#                             driver.find_element_by_id('a_dont_know').click()
-#                             contPergunta +1
-#                             loopResposta = False
-#                         if resposta == "4":
-#                             driver.find_element_by_id('a_probaly_not').click()
-#                             contPergunta +1
-#                             loopResposta = False
-#                         if resposta == "0":
-#                             loopResposta = False
-
-#                     else:
-#                         print('resposta vazia')
-#                     sleep(0.5)
-
-
-
-#          except Exception as error:
-#             print('Inside the except block: ' + repr(error))
-
-#     try:
-#         if lastAswer=="":
-#             driver.find_element_by_xpath('/html/body/footer/div[1]/div/div/div[2]/div[2]/a').click()
-#     except:
-#         print('erro3')
-
-#     sleep(0.5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def startAki():
     try:
